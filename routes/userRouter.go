@@ -1,12 +1,14 @@
 package routes
 
 import (
-	controller "golang-restuarant-management/controllers"
+	// controller "golang-restuarant-management/controllers"
+
+	controller "golang-restaurant-management/controllers"
 
 	"github.com/gin-gonic/gin"
 )
 
-func userRoutes(incomingRoutes *gin.Engine) {
+func UserRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.GET("/users", controller.GetUsers())
 	incomingRoutes.GET("/users/:id", controller.GetUser())
 	incomingRoutes.POST("/users/signup", controller.SignUp())

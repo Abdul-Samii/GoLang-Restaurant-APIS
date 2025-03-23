@@ -1,12 +1,14 @@
 package routes
 
 import (
-	controller "golang-restuarant-management/controllers"
+	// controller "golang-restuarant-management/controllers"
+
+	controller "golang-restaurant-management/controllers"
 
 	"github.com/gin-gonic/gin"
 )
 
-func orderRoutes(incomingRoutes *gin.Engine) {
+func OrderRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.GET("/orders", controller.GetOrders())
 	incomingRoutes.GET("/orders/:order_id", controller.GetOrder())
 	incomingRoutes.POST("/orders", controller.CreateOrder())
